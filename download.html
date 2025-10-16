@@ -64,24 +64,24 @@
                     </div>
                     <div>
                         <h2 class="text-2xl font-bold mb-2">SceneFlow Starter Edition</h2>
-                        <p class="text-gray-400">Version 1.0.0 • Windows & macOS</p>
+                        <p class="text-gray-400">Version 1.0.0 • Windows</p>
                     </div>
                 </div>
 
                 <!-- Download Buttons -->
                 <div class="grid md:grid-cols-2 gap-4 mb-8">
-                    <button id="windows-btn" class="border-2 border-purple-500/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-500/10 transition flex items-center justify-center gap-3">
+                    <a href="https://github.com/hwaynefair/SceneFlow/releases/download/v1.0.0/SceneFlow-Setup-Windows.exe" id="windows-btn" class="border-2 border-purple-500/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-500/10 transition flex items-center justify-center gap-3">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
                         </svg>
                         Download for Windows
-                    </button>
-                    <button id="macos-btn" class="border-2 border-purple-500/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-500/10 transition flex items-center justify-center gap-3">
+                    </a>
+                    <a href="https://github.com/hwaynefair/SceneFlow/releases/download/v1.0.0/SceneFlow-Windows.msi" id="macos-btn" class="border-2 border-purple-500/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-500/10 transition flex items-center justify-center gap-3" title="MSI Installer (Alternative)">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
                         </svg>
-                        Download for macOS
-                    </button>
+                        Download MSI (Windows)
+                    </a>
                 </div>
 
                 <!-- File Info -->
@@ -298,23 +298,15 @@
         function highlightDownloadButton() {
             const os = detectOS();
             const windowsBtn = document.getElementById('windows-btn');
-            const macosBtn = document.getElementById('macos-btn');
+            const msiBtn = document.getElementById('macos-btn');
 
             // Primary button classes (gradient)
             const primaryClasses = 'bg-gradient-to-r from-scene-cyan to-scene-purple hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105';
             // Secondary button classes (border only)
             const secondaryClasses = 'border-2 border-purple-500/50 hover:bg-purple-500/10';
 
-            if (os === 'macOS') {
-                // Highlight macOS button
-                macosBtn.className = macosBtn.className.replace(secondaryClasses, primaryClasses);
-            } else if (os === 'Windows') {
-                // Highlight Windows button
-                windowsBtn.className = windowsBtn.className.replace(secondaryClasses, primaryClasses);
-            } else {
-                // Default to Windows for unknown OS
-                windowsBtn.className = windowsBtn.className.replace(secondaryClasses, primaryClasses);
-            }
+            // Always highlight Windows EXE button by default (since we only have Windows versions)
+            windowsBtn.className = windowsBtn.className.replace(secondaryClasses, primaryClasses);
         }
 
         // Run on page load
