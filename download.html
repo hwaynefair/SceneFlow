@@ -68,19 +68,13 @@
                     </div>
                 </div>
 
-                <!-- Download Buttons -->
-                <div class="grid md:grid-cols-2 gap-4 mb-8">
-                    <a href="https://github.com/hwaynefair/SceneFlow/releases/download/v1.0.1/SceneFlow_0.1.0_x64-setup.exe" id="windows-btn" class="border-2 border-purple-500/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-500/10 transition flex items-center justify-center gap-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Download Button -->
+                <div class="mb-8">
+                    <a href="https://github.com/hwaynefair/SceneFlow/releases/download/v1.0.1/SceneFlow_0.1.0_x64_en-US.msi" id="windows-btn" class="bg-gradient-to-r from-scene-cyan to-scene-purple px-10 py-5 rounded-xl font-bold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition transform hover:scale-105 flex items-center justify-center gap-3 w-full max-w-md mx-auto">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
                         </svg>
-                        Windows Installer (EXE)
-                    </a>
-                    <a href="https://github.com/hwaynefair/SceneFlow/releases/download/v1.0.1/SceneFlow_0.1.0_x64_en-US.msi" id="msi-btn" class="border-2 border-purple-500/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-500/10 transition flex items-center justify-center gap-3" title="MSI Installer (Alternative)">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
-                        </svg>
-                        Windows Installer (MSI)
+                        Download for Windows
                     </a>
                 </div>
 
@@ -273,45 +267,6 @@
         </div>
     </footer>
 
-    <script>
-        // Detect user's operating system
-        function detectOS() {
-            const userAgent = window.navigator.userAgent;
-            const platform = window.navigator.platform;
-            const macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
-            const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
-
-            let os = null;
-
-            if (macosPlatforms.indexOf(platform) !== -1) {
-                os = 'macOS';
-            } else if (windowsPlatforms.indexOf(platform) !== -1) {
-                os = 'Windows';
-            } else if (/Linux/.test(platform)) {
-                os = 'Linux';
-            }
-
-            return os;
-        }
-
-        // Highlight the appropriate download button based on OS
-        function highlightDownloadButton() {
-            const os = detectOS();
-            const windowsBtn = document.getElementById('windows-btn');
-            const msiBtn = document.getElementById('msi-btn');
-
-            // Primary button classes (gradient)
-            const primaryClasses = 'bg-gradient-to-r from-scene-cyan to-scene-purple hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105';
-            // Secondary button classes (border only)
-            const secondaryClasses = 'border-2 border-purple-500/50 hover:bg-purple-500/10';
-
-            // Always highlight Windows EXE button by default (recommended installer)
-            windowsBtn.className = windowsBtn.className.replace(secondaryClasses, primaryClasses);
-        }
-
-        // Run on page load
-        document.addEventListener('DOMContentLoaded', highlightDownloadButton);
-    </script>
 
 </body>
 </html>
