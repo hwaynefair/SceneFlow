@@ -10,7 +10,21 @@
       "Bash(git branch:*)",
       "Bash(git push:*)",
       "Bash(git remote set-url:*)",
-      "Read(//c/Users/hwayn/Desktop/AnthropicVideoGenerator/documentary-app/src/assets/**)"
+      "Read(//c/Users/hwayn/Desktop/AnthropicVideoGenerator/documentary-app/src/assets/**)",
+      "Bash(gh:*)",
+      "Read(//c/Users/hwayn/Desktop/AnthropicVideoGenerator/documentary-app/src-tauri/target/release/bundle/msi/**)",
+      "Read(//c/Users/hwayn/Desktop/AnthropicVideoGenerator/documentary-app/src-tauri/target/release/bundle/**)",
+      "Bash(\"C:\\Users\\hwayn\\Desktop\\AnthropicVideoGenerator\\documentary-app\\src-tauri\\target\\release\\bundle\\nsis\\SceneFlow_0.1.0_x64-setup.exe#SceneFlow-Setup-Windows.exe\" ^)",
+      "Bash(\"C:\\Users\\hwayn\\Desktop\\AnthropicVideoGenerator\\documentary-app\\src-tauri\\target\\release\\bundle\\msi\\SceneFlow_0.1.0_x64_en-US.msi#SceneFlow-Windows.msi\" ^)",
+      "Bash(curl:*)",
+      "Bash(start https://github.com/hwaynefair/SceneFlow/releases/tag/v1.0.1)",
+      "Read(//c/Users/hwayn/Desktop/AnthropicVideoGenerator/documentary-app/src-tauri/target/release/**)",
+      "Read(//c/Users/hwayn/Desktop/**)",
+      "Bash(dir:*)",
+      "Bash(powershell:*)",
+      "Bash(copy:*)",
+      "Bash(start \"C:\\Users\\hwayn\\Desktop\\SceneFlow\\index.html\")",
+      "Bash(start \"C:\\Users\\hwayn\\Desktop\\SceneFlow\\download.html\")"
     ],
     "deny": [],
     "ask": []
